@@ -20,8 +20,11 @@ La arquitectura del código sigue el principio de separación de responsabilidad
 Plaintext
 
 gestor_inventario/
+
 ├── main.py # Interfaz de usuario y orquestación del programa.
+
 ├── inventario_logic.py # Núcleo lógico (motor de gestión de productos).
+
 └── README.md # Documentación del proyecto.
 🛠️ Instalación y Uso
 Clona este repositorio o descarga los archivos.
@@ -33,7 +36,9 @@ Ejecuta el programa principal:
 Bash
 
 python main.py
+
 📝 Ejemplo de Salida
+
 Plaintext
 
 Introduce el producto a añadir: Manzana
@@ -50,6 +55,7 @@ Estadísticas:
 'valor_total_stock': 5.0,
 'stock_total_unidades': 10
 }
+
 🛡️ Roadmap de Aprendizaje
 Este proyecto evolucionará conforme avance mi formación en Python siguiendo ciclos de mejora continua:
 
