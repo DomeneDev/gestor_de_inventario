@@ -63,6 +63,8 @@ Este proyecto evolucionará conforme avance mi formación en Python siguiendo ci
 
 [ ] Sprint 2: Implementación de manejo de excepciones (productos no encontrados).
 
-[ ] Sprint 3: Persistencia de datos en archivos .json (Base de datos local).
+[ ] Sprint 3: Refactorización Arquitectónica (Utils).
 
-[ ] Sprint 4: Refactorización a Programación Orientada a Objetos (Clase Producto y Almacén).
+[ ] Sprint 4: Persistencia de datos en archivos .json (Base de datos local).
+
+[ ] Sprint 5: Refactorización a Programación Orientada a Objetos (Clase Producto y Almacén).
