@@ -15,24 +15,78 @@ def ejecutar_inventario():
         print("+---------------------------|")
         print("| 1 - Agregar producto.     |")
         print("| 2 - Venta producto.       |")
-        print("| 3- Resumen inventario.    |")
+        print("| 3 - Resumen inventario.   |")
         print("| 4 - Salir.                |")
         print("+---------------------------+\n")
         # Solicitamos opción:
-        opcion = int(input("➡ Introduzca una opción: \n"))
+        while True:
+            try:
+                opcion = int(input("➡ Introduzca una opción: \n"))
+                break
+            except ValueError:
+                print("🛑 El valor introducido debe ser un número entero.")
         # Evaluamos opción
         match opcion:
             case 1:
-                nombre = input("Nombre del producto: ").lower()
-                precio = float(input("Precio del producto (2 decimales): "))
-                cantidad = int(input("Cantidad del producto: "))
+                while True:
+                    nombre = input("Nombre del producto: ").lower()
+                    try:
+                        if not nombre.strip():
+                            raise ValueError(
+                                "🛑 No has introducido un nombre...")
+                        else:
+                            break
+                    except ValueError as e:
+                        print(f"ERROR: {e}")
+                # Validación de precio, con bucle
+                while True:
+                    precio = input("Precio del producto (2 decimales): ")
+                    try:
+                        precio = float(precio)
+                        if precio < 0:
+                            print("🛑 El precio no puede ser negativo")
+                            continue
+                        break
+                    except ValueError:
+                        print("ERROR: ❌ no es un valor válido, intentelo de nuevo")
+                # Validación de cantidad con bucle
+                while True:
+                    cantidad = input("Cantidad del producto: ")
+                    try:
+                        cantidad = int(cantidad)
+                        if cantidad < 0:
+                            print("🛑 La cantidad no puede ser negativa.")
+                            continue
+                        break
+                    except ValueError:
+                        print("ERROR: ❌ no es un valor válido, intentelo de nuevo")
                 # Llamamos a nuestra lógica de entrada
                 agregar_producto(nombre, precio, cantidad, inventario)
                 print("✅ Producto añadido o modificado\n")
             case 2:
                 # Solicitamos datos del producto a vender
-                nombre = input("Nombre del producto a vender: ").lower()
-                cantidad = int(input("Cantida a vender: "))
+                # Validación de nombre de producto
+                while True:
+                    nombre = input("Nombre del producto: ").lower()
+                    try:
+                        if not nombre.strip():
+                            raise ValueError(
+                                "🛑 No has introducido un nombre...")
+                        else:
+                            break
+                    except ValueError as e:
+                        print(f"ERROR: {e}")
+                # Validación de Cantidad de venta
+                while True:
+                    cantidad = input("Cantidad del producto: ")
+                    try:
+                        cantidad = int(cantidad)
+                        if cantidad < 0:
+                            print("🛑 La cantidad no puede ser negativa.")
+                            continue
+                        break
+                    except ValueError:
+                        print("ERROR: ❌ no es un valor válido, intentelo de nuevo")
                 # Comprobamos si se puede realizar la venta:
                 exito = vender_producto(nombre, cantidad, inventario)
                 if exito:
