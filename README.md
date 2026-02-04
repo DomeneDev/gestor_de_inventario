@@ -59,9 +59,9 @@ Estadísticas:
 🛡️ Roadmap de Aprendizaje
 Este proyecto evolucionará conforme avance mi formación en Python siguiendo ciclos de mejora continua:
 
-[x] Sprint 1: Lógica core y diccionarios anidados (Estado actual).
+[x] Sprint 1: Lógica core y diccionarios anidados .
 
-[ ] Sprint 2: Implementación de manejo de excepciones (productos no encontrados).
+[x] Sprint 2: Implementación de manejo de excepciones (productos no encontrados) (Estado actual).
 
 [ ] Sprint 3: Refactorización Arquitectónica (Utils).
 
