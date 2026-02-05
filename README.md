@@ -17,15 +17,12 @@ Soporte para múltiples tipos de datos (str, int, float).
 📂 Estructura del Proyecto
 La arquitectura del código sigue el principio de separación de responsabilidades:
 
-Plaintext
-
+```plaintext
 gestor_inventario/
-
 ├── main.py # Interfaz de usuario y orquestación del programa.
-
 ├── inventario_logic.py # Núcleo lógico (motor de gestión de productos).
-
 └── README.md # Documentación del proyecto.
+```
 🛠️ Instalación y Uso
 Clona este repositorio o descarga los archivos.
 
@@ -39,29 +36,28 @@ python main.py
 
 📝 Ejemplo de Salida
 
-Plaintext
+```plaintext
 
 Introduce el producto a añadir: Manzana
 Introduce el precio: 0.50
 Introduce la cantidad: 10
 
 Estado del Inventario:
-
 - Manzana: 10 unidades a 0.5€/u.
-
 Estadísticas:
 {
 'total_productos_distintos': 1,
 'valor_total_stock': 5.0,
 'stock_total_unidades': 10
 }
+```
 
 🛡️ Roadmap de Aprendizaje
 Este proyecto evolucionará conforme avance mi formación en Python siguiendo ciclos de mejora continua:
 
-[x] Sprint 1: Lógica core y diccionarios anidados (Estado actual).
+[x] Sprint 1: Lógica core y diccionarios anidados .
 
-[ ] Sprint 2: Implementación de manejo de excepciones (productos no encontrados).
+[x] Sprint 2: Implementación de manejo de excepciones (productos no encontrados) (Estado actual).
 
 [ ] Sprint 3: Refactorización Arquitectónica (Utils).
 
