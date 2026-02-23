@@ -13,7 +13,8 @@ def mostrar_menu():
     print("| 1 - Agregar producto.     |")
     print("| 2 - Venta producto.       |")
     print("| 3 - Resumen inventario.   |")
-    print("| 4 - Salir.                |")
+    print("| 4 - Borrar inventario.    |")
+    print("| 5 - Salir.                |")
     print("+---------------------------+\n")
 
 
