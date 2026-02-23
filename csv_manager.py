@@ -82,6 +82,7 @@ def borrar_archivo_fisico(ruta: str) -> bool:
     Returns:
         bool: Resultado de la operación
     """
+    # Remove con os path
     if os.path.exists(ruta):
         os.remove(ruta)
         return True
