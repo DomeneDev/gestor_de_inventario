@@ -57,10 +57,10 @@ Este proyecto evolucionará conforme avance mi formación en Python siguiendo ci
 
 [x] Sprint 1: Lógica core y diccionarios anidados .
 
-[x] Sprint 2: Implementación de manejo de excepciones (productos no encontrados) (Estado actual).
+[x] Sprint 2: Implementación de manejo de excepciones (productos no encontrados).
 
-[ ] Sprint 3: Refactorización Arquitectónica (Utils).
+[x] Sprint 3: Refactorización Arquitectónica (Utils).
 
-[ ] Sprint 4: Persistencia de datos en archivos .json (Base de datos local).
+[x] Sprint 4: Persistencia de datos en archivos .csv (Base de datos local)(Estado actual).
 
 [ ] Sprint 5: Refactorización a Programación Orientada a Objetos (Clase Producto y Almacén).
