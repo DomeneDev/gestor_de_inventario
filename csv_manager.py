@@ -4,6 +4,7 @@ Fichero para almacenar funciones de comunicación y trabajos sobre el disco duro
 
 # biblioteca para trabajos con CSV
 import csv
+import os
 
 
 def guardar_csv(inventario: dict, ruta: str, msg_error: str):
@@ -21,7 +22,7 @@ def guardar_csv(inventario: dict, ruta: str, msg_error: str):
         campos = ['nombre', 'precio', 'cantidad']
         with open(ruta, 'w', newline="", encoding='utf-8') as f:
             # generamos un escritor
-            escritor = csv.DictWriter(f, fieldnames=campos)
+            escritor = csv.DictWriter(f, fieldnames=campos, delimiter=';')
             # Escribimos la cabecera
             escritor.writeheader()
             # Recorremos el inventario, diccionario de diccionarios
@@ -30,7 +31,7 @@ def guardar_csv(inventario: dict, ruta: str, msg_error: str):
                 fila = {
                     "nombre": nombre,
                     "precio": datos['precio'],
-                    "cantiad": datos['cantidad']
+                    "cantidad": datos['cantidad']
                 }
                 # Escribimos la fila
                 escritor.writerow(fila)
@@ -55,7 +56,7 @@ def cargar_csv(ruta: str) -> dict:
     try:
         with open(ruta, 'r', newline="", encoding='utf-8') as f:
             # Generamos lector
-            lector = csv.DictReader(f)
+            lector = csv.DictReader(f, delimiter=';')
             # Recorremos el fichero con el lector
             for fila in lector:
                 nombre = fila['nombre']
@@ -64,8 +65,24 @@ def cargar_csv(ruta: str) -> dict:
                 # Generamos el fichero inventario
                 inventario[nombre] = {
                     'precio': precio,
-                    'cantiad': cantidad
+                    'cantidad': cantidad
                 }
             return inventario
     except FileNotFoundError:
         return inventario
+
+
+def borrar_archivo_fisico(ruta: str) -> bool:
+    """
+    Funcíón para borrar la base de datos(el archivo físico)
+
+    Args:
+        ruta (str): Ruta donde se debe encontrar el archivo .csv
+
+    Returns:
+        bool: Resultado de la operación
+    """
+    if os.path.exists(ruta):
+        os.remove(ruta)
+        return True
+    return False
