@@ -19,9 +19,12 @@ La arquitectura del código sigue el principio de separación de responsabilidad
 
 ```plaintext
 gestor_inventario/
-├── main.py # Interfaz de usuario y orquestación del programa.
-├── inventario_logic.py # Núcleo lógico (motor de gestión de productos).
-└── README.md # Documentación del proyecto.
+├──data/                       # Carpeta para guardar datos de inventario
+|    ├── inventario.csv         # Fichero csv para almacenar inventario
+├── main.py                     # Interfaz de usuario y orquestación del programa.
+├── inventario_logic.py         # Núcleo lógico (motor de gestión de productos).
+├── csv_managet.py              # Archivo para el manejo del fichero csv
+└── README.md                   # Documentación del proyecto.
 ```
 🛠️ Instalación y Uso
 Clona este repositorio o descarga los archivos.
